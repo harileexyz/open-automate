@@ -1,0 +1,441 @@
+{
+    "name": "OpenAutomate",
+    "version": "1.0.0",
+    "description": "Open source test automation platform",
+    "lastUpdated": "2026-01-20",
+    "overallProgress": {
+        "completedFeatures": 51,
+        "totalFeatures": 72,
+        "percentComplete": 71
+    },
+    "phases": {
+        "phase1_foundation": {
+            "name": "Foundation",
+            "status": "completed",
+            "percentComplete": 100,
+            "features": {
+                "monorepo_setup": {
+                    "name": "Initialize monorepo with Turborepo",
+                    "completed": true
+                },
+                "nextjs_setup": {
+                    "name": "Set up Next.js 14 with TypeScript",
+                    "completed": true
+                },
+                "tailwind_setup": {
+                    "name": "Configure Tailwind CSS",
+                    "completed": true
+                },
+                "firebase_firestore": {
+                    "name": "Set up Firestore database",
+                    "completed": true
+                },
+                "firebase_auth": {
+                    "name": "Set up Firebase Authentication",
+                    "completed": true
+                },
+                "firebase_storage": {
+                    "name": "Set up Cloud Storage",
+                    "completed": true
+                },
+                "auth_login": {
+                    "name": "Login page",
+                    "completed": true
+                },
+                "auth_signup": {
+                    "name": "Signup page",
+                    "completed": true
+                },
+                "auth_password_reset": {
+                    "name": "Password reset page",
+                    "completed": true
+                },
+                "auth_context": {
+                    "name": "Auth context/provider",
+                    "completed": true
+                },
+                "ui_button": {
+                    "name": "Button component",
+                    "completed": true
+                },
+                "ui_input": {
+                    "name": "Input component",
+                    "completed": true
+                },
+                "ui_select": {
+                    "name": "Select component",
+                    "completed": true
+                },
+                "ui_modal": {
+                    "name": "Modal component",
+                    "completed": true
+                },
+                "ui_toast": {
+                    "name": "Toast notifications",
+                    "completed": true
+                },
+                "ui_card": {
+                    "name": "Card component",
+                    "completed": true
+                },
+                "ui_badge": {
+                    "name": "Badge component",
+                    "completed": true
+                },
+                "firestore_rules": {
+                    "name": "Firestore security rules",
+                    "completed": true
+                },
+                "shared_types": {
+                    "name": "Shared types package",
+                    "completed": true
+                }
+            }
+        },
+        "phase2_test_management": {
+            "name": "Test Management",
+            "status": "completed",
+            "percentComplete": 90,
+            "features": {
+                "projects_create": {
+                    "name": "Create project page",
+                    "completed": true
+                },
+                "projects_list": {
+                    "name": "Project list/grid view",
+                    "completed": true
+                },
+                "projects_settings": {
+                    "name": "Project settings page",
+                    "completed": true
+                },
+                "projects_members": {
+                    "name": "Member management UI",
+                    "completed": false,
+                    "notes": "Data model exists, UI not implemented"
+                },
+                "suites_list": {
+                    "name": "Suite list view",
+                    "completed": true
+                },
+                "suites_create_edit": {
+                    "name": "Create/Edit suite",
+                    "completed": true
+                },
+                "suites_drag_drop": {
+                    "name": "Drag & drop reordering",
+                    "completed": false,
+                    "notes": "Data model supports ordering, UI pending"
+                },
+                "suites_nested": {
+                    "name": "Nested suites support",
+                    "completed": false,
+                    "notes": "Data model has parentSuiteId, UI pending"
+                },
+                "testcases_list": {
+                    "name": "Test case list view",
+                    "completed": true
+                },
+                "testcases_create_edit": {
+                    "name": "Create/Edit test case",
+                    "completed": true
+                },
+                "testcases_step_editor": {
+                    "name": "Step editor (add/edit/delete/reorder)",
+                    "completed": true
+                },
+                "testcases_priority_status": {
+                    "name": "Priority & status management",
+                    "completed": true
+                },
+                "testcases_tags": {
+                    "name": "Tags & filtering",
+                    "completed": true
+                },
+                "testcases_multi_suite": {
+                    "name": "Multi-suite support",
+                    "completed": true
+                },
+                "search_filtering": {
+                    "name": "Search & filtering across entities",
+                    "completed": true
+                },
+                "testcases_duplicate": {
+                    "name": "Duplicate test case functionality",
+                    "completed": true
+                },
+                "batch_operations": {
+                    "name": "Batch operations (delete multiple, move)",
+                    "completed": true
+                }
+            }
+        },
+        "phase3_local_execution": {
+            "name": "Execution Core",
+            "status": "completed",
+            "percentComplete": 85,
+            "features": {
+                "playwright_setup": {
+                    "name": "Set up Playwright server executor",
+                    "completed": true
+                },
+                "execution_parse_steps": {
+                    "name": "Parse test steps",
+                    "completed": true
+                },
+                "execution_click": {
+                    "name": "Execute click action",
+                    "completed": true
+                },
+                "execution_type": {
+                    "name": "Execute type action",
+                    "completed": true
+                },
+                "execution_navigate": {
+                    "name": "Execute navigate action",
+                    "completed": true
+                },
+                "execution_wait": {
+                    "name": "Execute wait action",
+                    "completed": true
+                },
+                "execution_assertions": {
+                    "name": "Handle assertions",
+                    "completed": true
+                },
+                "execution_error_handling": {
+                    "name": "Error handling & recovery",
+                    "completed": true
+                },
+                "cli_listen": {
+                    "name": "Server-triggered run execution",
+                    "completed": true
+                },
+                "cli_direct_run": {
+                    "name": "Direct CLI test execution",
+                    "completed": false,
+                    "notes": "Removed after consolidating on the Next.js server executor"
+                },
+                "firestore_job_queue": {
+                    "name": "Firestore-based job queue",
+                    "completed": true
+                },
+                "realtime_logs": {
+                    "name": "Real-time log updates to Firestore",
+                    "completed": true
+                },
+                "variable_substitution": {
+                    "name": "Variable substitution in steps",
+                    "completed": true
+                },
+                "artifact_screenshots": {
+                    "name": "Screenshots on failure",
+                    "completed": false
+                },
+                "artifact_video": {
+                    "name": "Video recording",
+                    "completed": false
+                },
+                "artifact_console_logs": {
+                    "name": "Console logs capture",
+                    "completed": true
+                }
+            }
+        },
+        "phase4_reporting": {
+            "name": "Results & Reporting",
+            "status": "in_progress",
+            "percentComplete": 40,
+            "features": {
+                "run_history_list": {
+                    "name": "Run history list",
+                    "completed": true
+                },
+                "run_details_logs": {
+                    "name": "Run details with real-time logs",
+                    "completed": true
+                },
+                "step_results_status": {
+                    "name": "Step-by-step results with status indicators",
+                    "completed": true
+                },
+                "live_execution_indicator": {
+                    "name": "Live execution indicator",
+                    "completed": true
+                },
+                "run_naming_timestamp": {
+                    "name": "Default run naming with timestamp",
+                    "completed": true
+                },
+                "elaborate_detailed_reports": {
+                    "name": "Elaborate shareable detailed reports",
+                    "completed": true
+                },
+                "charts_pass_fail": {
+                    "name": "Pass/Fail breakdown charts",
+                    "completed": false
+                },
+                "charts_duration": {
+                    "name": "Duration charts",
+                    "completed": false
+                },
+                "charts_trends": {
+                    "name": "Trend graphs over time",
+                    "completed": false
+                },
+                "flaky_test_detection": {
+                    "name": "Flaky test detection",
+                    "completed": false
+                },
+                "screenshot_gallery": {
+                    "name": "Screenshot image gallery",
+                    "completed": false
+                },
+                "video_playback": {
+                    "name": "Video playback",
+                    "completed": false
+                },
+                "comparison_tools": {
+                    "name": "Visual comparison tools",
+                    "completed": false
+                },
+                "export_pdf": {
+                    "name": "PDF report export",
+                    "completed": false
+                },
+                "export_csv": {
+                    "name": "CSV export",
+                    "completed": false
+                },
+                "export_json": {
+                    "name": "JSON export",
+                    "completed": false
+                },
+                "dashboard_recent_runs": {
+                    "name": "Recent runs dashboard widget",
+                    "completed": false
+                },
+                "dashboard_pass_rate": {
+                    "name": "Pass rate trends widget",
+                    "completed": false
+                },
+                "dashboard_slowest_tests": {
+                    "name": "Slowest tests widget",
+                    "completed": false
+                },
+                "dashboard_failing_tests": {
+                    "name": "Most failing tests widget",
+                    "completed": false
+                }
+            }
+        },
+        "phase5_advanced_features": {
+            "name": "Advanced Features",
+            "status": "planned",
+            "percentComplete": 15,
+            "features": {
+                "jira_integration": {
+                    "name": "Link tests to Jira tickets",
+                    "completed": false
+                },
+                "coverage_visualization": {
+                    "name": "Test coverage visualization",
+                    "completed": false
+                },
+                "project_variables": {
+                    "name": "Project-level variables",
+                    "completed": true
+                },
+                "variable_substitution": {
+                    "name": "Variable substitution in test steps",
+                    "completed": true
+                },
+                "data_driven_testing": {
+                    "name": "Data-driven testing (multiple data sets)",
+                    "completed": false
+                },
+                "scheduled_runs": {
+                    "name": "Scheduled runs",
+                    "completed": false
+                },
+                "recurring_schedules": {
+                    "name": "Recurring schedules",
+                    "completed": false
+                },
+                "email_notifications": {
+                    "name": "Email on failure",
+                    "completed": false
+                },
+                "slack_integration": {
+                    "name": "Slack integration",
+                    "completed": false
+                },
+                "webhook_callbacks": {
+                    "name": "Webhook callbacks",
+                    "completed": false
+                },
+                "test_comments": {
+                    "name": "Comments on test cases",
+                    "completed": false
+                },
+                "activity_history": {
+                    "name": "Activity history",
+                    "completed": false
+                },
+                "team_permissions": {
+                    "name": "Team permissions",
+                    "completed": false
+                },
+                "import_selenium": {
+                    "name": "Import from Selenium IDE",
+                    "completed": false
+                },
+                "import_other_tools": {
+                    "name": "Import from other tools",
+                    "completed": false
+                },
+                "export_test_cases": {
+                    "name": "Export test cases",
+                    "completed": false
+                },
+                "ai_test_generation": {
+                    "description": "AI Test Case Generation from URL",
+                    "completed": true,
+                    "notes": "Backend API + UI Modal + Draft Review workflow implemented."
+                },
+                "external_ai_import": {
+                    "name": "External AI Test Import (JSON Paste)",
+                    "completed": true,
+                    "notes": "API endpoint + Import Modal + ChatGPT/Claude prompt templates implemented"
+                }
+            }
+        }
+    },
+    "mvpCriteria": {
+        "create_projects_suites": {
+            "name": "Users can create projects and organize test suites",
+            "completed": true
+        },
+        "create_test_cases": {
+            "name": "Users can manually create/edit test cases with steps",
+            "completed": true
+        },
+        "run_tests_locally": {
+            "name": "Users can run tests locally via the agent",
+            "completed": true
+        },
+        "view_realtime_results": {
+            "name": "Users can view real-time execution results",
+            "completed": true
+        },
+        "view_historical_results": {
+            "name": "Users can view historical results and basic reports",
+            "completed": false,
+            "notes": "Partial - history list exists, advanced reporting pending"
+        },
+        "view_analytics_trends": {
+            "name": "Users can view analytics and trends",
+            "completed": false
+        }
+    }
+}

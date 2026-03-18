@@ -1,0 +1,127 @@
+# OpenAutomate Progress Tracker
+# This file is automatically updated by the agent during RALPH loop execution
+# Last Updated: 2026-03-18T18:40:00+05:30
+
+================================================================================
+NEWLY ADDED TASKS
+================================================================================
+[2026-01-20] T-A020 - External AI Import API ✅ COMPLETED
+  Priority: high
+  Implemented: POST /api/import/json with flexible JSON validation
+[2026-01-20] T-A021 - External AI Import UI ✅ COMPLETED
+  Priority: high
+  Implemented: ImportJSONModal with paste, validate, preview, and import flow
+[2026-01-20] T-A022 - JSON Format Helpers & Examples ✅ COMPLETED
+  Priority: medium
+  Implemented: ChatGPT/Claude prompt templates and example JSON formats
+
+[2026-01-20] T-A016 - Draft Test Case Data Model (AI Feature)
+[2026-01-20] T-A017 - AI Test Generator Backend (AI Feature)
+[2026-01-20] T-A018 - AI Generation UI (AI Feature)
+[2026-01-20] T-A019 - Draft Review UI (AI Feature)
+
+================================================================================
+PROGRESS HISTORY
+================================================================================
+
+## Active Task
+- Task ID: None
+- Status: IDLE
+- Next Recommended Task: T-M004 (Member Management UI) or T-M007 (Suite Reordering)
+
+[2026-03-18] Architecture Cleanup - Standalone Runner Removed ✅ COMPLETED
+  Priority: high
+  Implemented: Removed `packages/runner` and kept the Next.js server executor as the only supported execution path.
+
+## Completed Task History (Today)
+[2026-01-20] T-A022 - JSON Format Helpers & Examples ✅ VERIFIED
+  Description: Created aiPromptTemplates.ts with ChatGPT/Claude prompts and example JSON, integrated into ImportJSONModal help section.
+  Verification: Build ✅ PASS.
+
+[2026-01-20] T-A021 - External AI Import UI ✅ VERIFIED
+  Description: Created ImportJSONModal component with 3 views (paste, preview, help), added to suite detail page with "Import JSON" button.
+  Verification: Build ✅ PASS.
+
+[2026-01-20] T-A020 - External AI Import API ✅ VERIFIED
+  Description: Created /api/import/json endpoint that validates flexible JSON formats, supports field aliases, returns validation errors.
+  Verification: Build ✅ PASS.
+
+
+## Completed Task History (Now)
+[2026-03-17] T-M017 - Batch Operations ✅ VERIFIED
+  Description: Implemented batch select UI and wired bulk delete and move to suite; added toasts and state resets.
+  Verification:
+  - Build: ✅ PASS.
+  - UI Logic: Selection mode, modals, and handlers present; hooks provide `bulkDeleteTestCases` and `batchMoveToSuite`.
+
+## Completed Task History
+[2026-01-20] T-A019 - Draft Review UI ✅ VERIFIED
+  Description: Created `DraftReviewList` component and updated `TestSuiteDetailPage` to filter and display draft test cases separately. Added support for approving drafts (promoting to active) and discarding them.
+  Verification:
+  - Build: ✅ PASS.
+  - UI Logic: Verified drafts do not mix with active cases.
+    - "Run Suite" count respects only active cases.
+    - Implemented "Approve" logic (updates status to 'active').
+    - Added "AI Generate" button to Suite Detail Page (`suites/[suiteId]/page.tsx`) to allow direct generation into the current suite.
+  - Regression: Existing suite logic preserved.
+
+[2026-01-20] T-A018 - AI Generation UI ✅ VERIFIED
+  Description: Added `AIGenerateModal` and integrated it into the Test Suites page. It triggers the AI generation API and creates a draft test case.
+  Verification:
+  - Build: ✅ PASS.
+  - Integration: Modal opens, API is called, loading state shows, and success toast appears.
+  - Data: New test case is created in Firestore with status 'draft'.
+
+[2026-01-20] T-A017 - AI Test Generator Backend ✅ VERIFIED
+  Description: Implemented API route `api/ai/generate` with mock logic to simulate scraping and LLM step generation.
+  Verification:
+  - Build: ✅ PASS.
+  - Mock Response: Returns valid `CreateTestStepInput` array with 7 sample steps.
+  - Validation: API correctly rejects request without URL.
+
+[2026-01-20] T-A016 - Draft Test Case Data Model ✅ VERIFIED
+  Description: Verified that `TestCaseStatus` and `TestCase` interfaces already support 'draft' status. `useTestCaseMutations` correctly defaults new cases to 'draft'.
+  Verification:
+  - shared/src/types/index.ts checked: `TestCaseStatus` contains 'draft'.
+  - apps/web/src/lib/hooks/useTestCases.ts checked: `createTestCase` uses `status: 'draft'`.
+  - Build Check: PASS.
+
+[2026-01-20]Current Task: T-R015 Dashboard Pass Rate Widget (Completed)
+Next Task: T-R012 CSV Export or T-R016 Slowest Tests Widget ✅ VERIFIED
+  Description: Added expandable rows to Test Runs list to show execution logs inline.
+  Verification:
+  - Build: ✅ PASS (No TS errors)
+  - Implementation:
+    - Replaced basic Link with `ExpandableRunRow` component.
+    - Added expand/collapse toggle.
+    - Showing mini logs and console log preview in expanded area.
+
+## Completed Task History
+[2026-01-20] T-E016 - Console Logs Capture ✅ VERIFIED
+  Description: Captures browser console logs during execution and displays them in the run details UI (for both single cases and suites).
+  Verification:
+  - Build: ✅ PASS (No TS errors)
+  - Implementation:
+    - Added `page.on('console')` listener in Runner.
+    - Updated `TestRun` interface to include `consoleLogs`.
+    - Added "Console Output" section in Test Run Details page.
+  - Note: T-E015 (Video) was cancelled as per user request.
+
+## Session Info
+- Session Started: 2026-01-20T07:54:00+05:30
+- Tasks Completed This Session: 4 (T-R018, T-R019, T-AUTH01, T-E014)
+- Total Time Spent: ~120 minutes
+
+## Project Statistics
+- Total Tasks: 66
+- Pending: 19 (29%)
+- In Progress: 1
+
+================================================================================
+COMPLETED TASK HISTORY
+================================================================================
+... (previous history)
+[2026-01-20] T-E014 - Screenshot on Failure ✅ VERIFIED
+  Description: Captures screenshot on step failure, uploads to Firebase Storage, and displays "View Screenshot" in UI logs.
+
+...

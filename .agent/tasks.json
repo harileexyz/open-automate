@@ -1,0 +1,1334 @@
+{
+    "metadata": {
+        "projectName": "OpenAutomate",
+        "lastUpdated": "2026-01-20",
+        "version": "1.0.0",
+        "totalTasks": 77,
+        "completedTasks": 49,
+        "inProgressTasks": 0,
+        "pendingTasks": 28
+    },
+    "taskGroups": {
+        "phase1_foundation": {
+            "groupName": "Foundation",
+            "phase": "phase1",
+            "priority": "completed",
+            "status": "completed",
+            "tasks": [
+                {
+                    "id": "T-F001",
+                    "name": "Initialize monorepo with Turborepo",
+                    "status": "completed",
+                    "completedDate": "2026-01-15"
+                },
+                {
+                    "id": "T-F002",
+                    "name": "Set up Next.js 14 with TypeScript",
+                    "status": "completed",
+                    "completedDate": "2026-01-15"
+                },
+                {
+                    "id": "T-F003",
+                    "name": "Configure Tailwind CSS",
+                    "status": "completed",
+                    "completedDate": "2026-01-15"
+                },
+                {
+                    "id": "T-F004",
+                    "name": "Set up Firestore database",
+                    "status": "completed",
+                    "completedDate": "2026-01-15"
+                },
+                {
+                    "id": "T-F005",
+                    "name": "Set up Firebase Authentication",
+                    "status": "completed",
+                    "completedDate": "2026-01-15"
+                },
+                {
+                    "id": "T-F006",
+                    "name": "Set up Cloud Storage",
+                    "status": "completed",
+                    "completedDate": "2026-01-15"
+                },
+                {
+                    "id": "T-F007",
+                    "name": "Login page",
+                    "status": "completed",
+                    "completedDate": "2026-01-15"
+                },
+                {
+                    "id": "T-F008",
+                    "name": "Signup page",
+                    "status": "completed",
+                    "completedDate": "2026-01-15"
+                },
+                {
+                    "id": "T-F009",
+                    "name": "Password reset page",
+                    "status": "completed",
+                    "completedDate": "2026-01-15"
+                },
+                {
+                    "id": "T-F010",
+                    "name": "Auth context/provider",
+                    "status": "completed",
+                    "completedDate": "2026-01-15"
+                },
+                {
+                    "id": "T-F011",
+                    "name": "Button component",
+                    "status": "completed",
+                    "completedDate": "2026-01-15"
+                },
+                {
+                    "id": "T-F012",
+                    "name": "Input component",
+                    "status": "completed",
+                    "completedDate": "2026-01-15"
+                },
+                {
+                    "id": "T-F013",
+                    "name": "Select component",
+                    "status": "completed",
+                    "completedDate": "2026-01-15"
+                },
+                {
+                    "id": "T-F014",
+                    "name": "Modal component",
+                    "status": "completed",
+                    "completedDate": "2026-01-15"
+                },
+                {
+                    "id": "T-F015",
+                    "name": "Toast notifications",
+                    "status": "completed",
+                    "completedDate": "2026-01-15"
+                },
+                {
+                    "id": "T-F016",
+                    "name": "Card component",
+                    "status": "completed",
+                    "completedDate": "2026-01-15"
+                },
+                {
+                    "id": "T-F017",
+                    "name": "Badge component",
+                    "status": "completed",
+                    "completedDate": "2026-01-15"
+                },
+                {
+                    "id": "T-F018",
+                    "name": "Firestore security rules",
+                    "status": "completed",
+                    "completedDate": "2026-01-16"
+                },
+                {
+                    "id": "T-F019",
+                    "name": "Shared types package",
+                    "status": "completed",
+                    "completedDate": "2026-01-16"
+                }
+            ]
+        },
+        "phase2_test_management": {
+            "groupName": "Test Management",
+            "phase": "phase2",
+            "priority": "high",
+            "status": "mostly_complete",
+            "tasks": [
+                {
+                    "id": "T-M001",
+                    "name": "Create project page",
+                    "status": "completed",
+                    "completedDate": "2026-01-16"
+                },
+                {
+                    "id": "T-M002",
+                    "name": "Project list/grid view",
+                    "status": "completed",
+                    "completedDate": "2026-01-16"
+                },
+                {
+                    "id": "T-M003",
+                    "name": "Project settings page",
+                    "status": "completed",
+                    "completedDate": "2026-01-17"
+                },
+                {
+                    "id": "T-M004",
+                    "name": "Member Management UI",
+                    "description": "Build UI for adding/removing project members. Data model already exists with 'members' array in projects collection.",
+                    "status": "pending",
+                    "estimatedHours": 4,
+                    "dependencies": [],
+                    "acceptanceCriteria": [
+                        "Add members button on project settings page",
+                        "Modal to search and add users by email",
+                        "List of current members with remove option",
+                        "Members can view but not edit project"
+                    ],
+                    "technicalNotes": "Use existing useProjectMutations hook, add updateMembers function",
+                    "filesAffected": [
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/settings/page.tsx",
+                        "apps/web/src/lib/hooks/useProjects.ts"
+                    ]
+                },
+                {
+                    "id": "T-M005",
+                    "name": "Suite list view",
+                    "status": "completed",
+                    "completedDate": "2026-01-17"
+                },
+                {
+                    "id": "T-M006",
+                    "name": "Create/Edit suite",
+                    "status": "completed",
+                    "completedDate": "2026-01-17"
+                },
+                {
+                    "id": "T-M007",
+                    "name": "Drag & Drop Suite Reordering",
+                    "description": "Implement drag and drop reordering for test suites. Order field exists in data model.",
+                    "status": "pending",
+                    "estimatedHours": 3,
+                    "dependencies": [],
+                    "acceptanceCriteria": [
+                        "Suites can be reordered via drag and drop",
+                        "Order persists to Firestore",
+                        "Visual feedback during drag"
+                    ],
+                    "technicalNotes": "Use @dnd-kit/core or react-beautiful-dnd. reorderSuites mutation already exists.",
+                    "filesAffected": [
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/suites/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-M008",
+                    "name": "Nested Suites UI",
+                    "description": "Implement nested/hierarchical suites view. parentSuiteId field exists in data model.",
+                    "status": "pending",
+                    "estimatedHours": 5,
+                    "dependencies": [
+                        "T-M007"
+                    ],
+                    "acceptanceCriteria": [
+                        "Suites can have parent suites",
+                        "Tree view for nested suites",
+                        "Indent child suites visually",
+                        "Collapse/expand parent suites"
+                    ],
+                    "technicalNotes": "Build recursive SuiteTree component",
+                    "filesAffected": [
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/suites/page.tsx",
+                        "apps/web/src/components/suites/SuiteTree.tsx"
+                    ]
+                },
+                {
+                    "id": "T-M009",
+                    "name": "Test case list view",
+                    "status": "completed",
+                    "completedDate": "2026-01-17"
+                },
+                {
+                    "id": "T-M010",
+                    "name": "Create/Edit test case",
+                    "status": "completed",
+                    "completedDate": "2026-01-17"
+                },
+                {
+                    "id": "T-M011",
+                    "name": "Step editor (add/edit/delete/reorder)",
+                    "status": "completed",
+                    "completedDate": "2026-01-17"
+                },
+                {
+                    "id": "T-M012",
+                    "name": "Priority & status management",
+                    "status": "completed",
+                    "completedDate": "2026-01-17"
+                },
+                {
+                    "id": "T-M013",
+                    "name": "Tags & filtering",
+                    "status": "completed",
+                    "completedDate": "2026-01-17"
+                },
+                {
+                    "id": "T-M014",
+                    "name": "Multi-suite support",
+                    "status": "completed",
+                    "completedDate": "2026-01-18"
+                },
+                {
+                    "id": "T-M015",
+                    "name": "Search & filtering across entities",
+                    "status": "completed",
+                    "completedDate": "2026-01-17"
+                },
+                {
+                    "id": "T-M016",
+                    "name": "Duplicate test case functionality",
+                    "status": "completed",
+                    "completedDate": "2026-01-17"
+                },
+                {
+                    "id": "T-M017",
+                    "name": "Batch Operations",
+                    "description": "Implement batch delete/move for test cases",
+                    "status": "completed",
+                    "completedDate": "2026-03-17",
+                    "estimatedHours": 4,
+                    "dependencies": [],
+                    "acceptanceCriteria": [
+                        "Multi-select test cases with checkboxes",
+                        "Bulk delete selected cases",
+                        "Bulk move to different suite",
+                        "Confirmation modal for destructive actions"
+                    ],
+                    "technicalNotes": "Add batch operations to useTestCaseMutations",
+                    "filesAffected": [
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/test-cases/page.tsx",
+                        "apps/web/src/lib/hooks/useTestCases.ts"
+                    ]
+                },
+                {
+                    "id": "T-M018",
+                    "name": "Compact UI overhaul for Test Cases & Suites",
+                    "description": "Refactor the test case and suite management UI into high-density list views for better scalability.",
+                    "status": "completed",
+                    "completedDate": "2026-01-20",
+                    "estimatedHours": 4,
+                    "dependencies": [],
+                    "acceptanceCriteria": [
+                        "High-density grid/list view for test cases",
+                        "High-density list view for test suites",
+                        "Improved filtering and navigation for large data sets",
+                        "Compact modals for creation and editing"
+                    ],
+                    "technicalNotes": "Redesign pages using a consistent high-density layout system.",
+                    "filesAffected": [
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/test-cases/page.tsx",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/suites/page.tsx"
+                    ]
+                }
+            ]
+        },
+        "phase3_local_execution": {
+            "groupName": "Execution Core",
+            "phase": "phase3",
+            "priority": "high",
+            "status": "mostly_complete",
+            "tasks": [
+                {
+                    "id": "T-E001",
+                    "name": "Set up Playwright server executor",
+                    "status": "completed",
+                    "completedDate": "2026-01-18"
+                },
+                {
+                    "id": "T-E002",
+                    "name": "Parse test steps",
+                    "status": "completed",
+                    "completedDate": "2026-01-18"
+                },
+                {
+                    "id": "T-E003",
+                    "name": "Execute click action",
+                    "status": "completed",
+                    "completedDate": "2026-01-18"
+                },
+                {
+                    "id": "T-E004",
+                    "name": "Execute type action",
+                    "status": "completed",
+                    "completedDate": "2026-01-18"
+                },
+                {
+                    "id": "T-E005",
+                    "name": "Execute navigate action",
+                    "status": "completed",
+                    "completedDate": "2026-01-18"
+                },
+                {
+                    "id": "T-E006",
+                    "name": "Execute wait action",
+                    "status": "completed",
+                    "completedDate": "2026-01-18"
+                },
+                {
+                    "id": "T-E007",
+                    "name": "Assertion Actions",
+                    "description": "Implement assertion action types in executor (visible, hidden, text, value, url, title)",
+                    "status": "completed",
+                    "completedDate": "2026-01-20",
+                    "estimatedHours": 4,
+                    "dependencies": [],
+                    "acceptanceCriteria": [
+                        "assert-visible checks element is visible",
+                        "assert-text checks element contains text",
+                        "assert-url checks current URL matches",
+                        "assert-title checks page title",
+                        "Assertions report pass/fail correctly"
+                    ],
+                    "technicalNotes": "Extend executeStep function in the server executor path",
+                    "filesAffected": [
+                        "apps/web/src/lib/runner/step-executor.ts",
+                        "apps/web/src/lib/runner/server-executor.ts"
+                    ]
+                },
+                {
+                    "id": "T-E008",
+                    "name": "Error handling & recovery",
+                    "status": "completed",
+                    "completedDate": "2026-01-18"
+                },
+                {
+                    "id": "T-E009",
+                    "name": "Server-triggered run execution",
+                    "status": "completed",
+                    "completedDate": "2026-01-18"
+                },
+                {
+                    "id": "T-E010",
+                    "name": "Direct CLI Test Execution",
+                    "description": "Removed after consolidating execution into the Next.js server executor",
+                    "status": "cancelled",
+                    "estimatedHours": 2,
+                    "dependencies": [],
+                    "acceptanceCriteria": [
+                        "npm run dev -- run <testCaseId> works",
+                        "Outputs results to console",
+                        "Returns proper exit code"
+                    ],
+                    "technicalNotes": "No longer applicable after removing the standalone runner workspace",
+                    "filesAffected": []
+                },
+                {
+                    "id": "T-E011",
+                    "name": "Firestore-based job queue",
+                    "status": "completed",
+                    "completedDate": "2026-01-18"
+                },
+                {
+                    "id": "T-E012",
+                    "name": "Real-time log updates to Firestore",
+                    "status": "completed",
+                    "completedDate": "2026-01-18"
+                },
+                {
+                    "id": "T-E013",
+                    "name": "Variable substitution in steps",
+                    "status": "completed",
+                    "completedDate": "2026-01-18"
+                },
+                {
+                    "id": "T-E014",
+                    "name": "Screenshot on Failure",
+                    "description": "Capture screenshot when a step fails during execution",
+                    "status": "pending",
+                    "estimatedHours": 3,
+                    "dependencies": [],
+                    "acceptanceCriteria": [
+                        "Screenshot taken on step failure",
+                        "Screenshot uploaded to Firebase Storage",
+                        "Screenshot URL saved in test run logs",
+                        "Screenshot viewable in web UI"
+                    ],
+                    "technicalNotes": "Use page.screenshot() in Playwright, upload via Firebase Admin SDK",
+                    "filesAffected": [
+                        "apps/web/src/lib/runner/server-executor.ts",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/test-runs/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-E015",
+                    "name": "Video Recording",
+                    "description": "Record video of test execution",
+                    "status": "cancelled",
+                    "estimatedHours": 4,
+                    "dependencies": [
+                        "T-E014"
+                    ],
+                    "acceptanceCriteria": [
+                        "Video recorded for each test run",
+                        "Video uploaded to Firebase Storage",
+                        "Video playable in web UI"
+                    ],
+                    "technicalNotes": "Use Playwright's video recording option in browser context",
+                    "filesAffected": [
+                        "apps/web/src/lib/runner/server-executor.ts",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/test-runs/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-E016",
+                    "name": "Console Logs Capture",
+                    "description": "Capture browser console logs during test execution",
+                    "status": "completed",
+                    "completedDate": "2026-01-20",
+                    "estimatedHours": 2,
+                    "dependencies": [],
+                    "acceptanceCriteria": [
+                        "Console logs captured during execution",
+                        "Logs saved with test run",
+                        "Logs viewable in UI (collapsible section)"
+                    ],
+                    "technicalNotes": "Use page.on('console') event in Playwright",
+                    "filesAffected": [
+                        "apps/web/src/lib/runner/server-executor.ts",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/test-runs/[runId]/page.tsx"
+                    ]
+                }
+            ]
+        },
+        "phase4_reporting": {
+            "groupName": "Results & Reporting",
+            "phase": "phase4",
+            "priority": "medium",
+            "status": "in_progress",
+            "tasks": [
+                {
+                    "id": "T-R001",
+                    "name": "Run history list",
+                    "status": "completed",
+                    "completedDate": "2026-01-18"
+                },
+                {
+                    "id": "T-R002",
+                    "name": "Run details with real-time logs",
+                    "status": "completed",
+                    "completedDate": "2026-01-18"
+                },
+                {
+                    "id": "T-R003",
+                    "name": "Step-by-step results with status indicators",
+                    "status": "completed",
+                    "completedDate": "2026-01-18"
+                },
+                {
+                    "id": "T-R004",
+                    "name": "Live execution indicator",
+                    "status": "completed",
+                    "completedDate": "2026-01-18"
+                },
+                {
+                    "id": "T-R005",
+                    "name": "Pass/Fail Charts",
+                    "description": "Create pass/fail breakdown chart for test runs",
+                    "status": "pending",
+                    "estimatedHours": 3,
+                    "dependencies": [],
+                    "acceptanceCriteria": [
+                        "Pie/donut chart showing pass/fail ratio",
+                        "Chart on project dashboard",
+                        "Filter by date range"
+                    ],
+                    "technicalNotes": "Use recharts or chart.js library",
+                    "filesAffected": [
+                        "apps/web/src/components/charts/PassFailChart.tsx",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-R006",
+                    "name": "Duration Charts",
+                    "description": "Create test duration charts over time",
+                    "status": "pending",
+                    "estimatedHours": 3,
+                    "dependencies": [
+                        "T-R005"
+                    ],
+                    "acceptanceCriteria": [
+                        "Line chart showing test duration trends",
+                        "Average duration per test case",
+                        "Identify slowest tests"
+                    ],
+                    "technicalNotes": "Aggregate durations from testRuns collection",
+                    "filesAffected": [
+                        "apps/web/src/components/charts/DurationChart.tsx",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-R007",
+                    "name": "Trend Graphs",
+                    "description": "Show pass rate trends over time",
+                    "status": "pending",
+                    "estimatedHours": 4,
+                    "dependencies": [
+                        "T-R005"
+                    ],
+                    "acceptanceCriteria": [
+                        "Line graph showing pass rate over time",
+                        "Daily/weekly/monthly aggregation",
+                        "Comparison with previous period"
+                    ],
+                    "technicalNotes": "Query testRuns with date grouping",
+                    "filesAffected": [
+                        "apps/web/src/components/charts/TrendChart.tsx",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-R008",
+                    "name": "Flaky Test Detection",
+                    "description": "Identify tests that sometimes pass and sometimes fail",
+                    "status": "pending",
+                    "estimatedHours": 4,
+                    "dependencies": [
+                        "T-R007"
+                    ],
+                    "acceptanceCriteria": [
+                        "Calculate flakiness score per test",
+                        "List flaky tests with score",
+                        "Badge/indicator on flaky tests"
+                    ],
+                    "technicalNotes": "Analyze last N runs per test case, calculate pass/fail variance",
+                    "filesAffected": [
+                        "apps/web/src/lib/hooks/useTestAnalytics.ts",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-R009",
+                    "name": "Screenshot Gallery",
+                    "description": "Image gallery for failure screenshots",
+                    "status": "pending",
+                    "estimatedHours": 3,
+                    "dependencies": [
+                        "T-E014"
+                    ],
+                    "acceptanceCriteria": [
+                        "Grid view of screenshots",
+                        "Click to enlarge",
+                        "Navigate between screenshots"
+                    ],
+                    "technicalNotes": "Simple lightbox component",
+                    "filesAffected": [
+                        "apps/web/src/components/ui/ImageGallery.tsx",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/test-runs/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-R010",
+                    "name": "Video Playback UI",
+                    "description": "Video player for test recordings",
+                    "status": "cancelled",
+                    "estimatedHours": 2,
+                    "dependencies": [
+                        "T-E015"
+                    ],
+                    "acceptanceCriteria": [
+                        "Video player on run details page",
+                        "Play/pause/seek controls",
+                        "Fullscreen option"
+                    ],
+                    "technicalNotes": "Use native video element or react-player",
+                    "filesAffected": [
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/test-runs/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-R011",
+                    "name": "PDF Report Export",
+                    "description": "Export test run results as PDF",
+                    "status": "pending",
+                    "estimatedHours": 5,
+                    "dependencies": [
+                        "T-R005",
+                        "T-R006"
+                    ],
+                    "acceptanceCriteria": [
+                        "Export button on test runs page",
+                        "PDF includes summary, charts, details",
+                        "Professional-looking format"
+                    ],
+                    "technicalNotes": "Use @react-pdf/renderer or jsPDF",
+                    "filesAffected": [
+                        "apps/web/src/lib/utils/pdfExport.ts",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/test-runs/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-R012",
+                    "name": "CSV Export",
+                    "description": "Export test results as CSV",
+                    "status": "pending",
+                    "estimatedHours": 2,
+                    "dependencies": [],
+                    "acceptanceCriteria": [
+                        "Export test cases to CSV",
+                        "Export test run results to CSV",
+                        "Include all relevant columns"
+                    ],
+                    "technicalNotes": "Simple CSV generation, trigger download",
+                    "filesAffected": [
+                        "apps/web/src/lib/utils/csvExport.ts",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/test-runs/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-R013",
+                    "name": "JSON Export",
+                    "description": "Export test data as JSON",
+                    "status": "pending",
+                    "estimatedHours": 1,
+                    "dependencies": [],
+                    "acceptanceCriteria": [
+                        "Export test cases to JSON",
+                        "Export test runs to JSON",
+                        "Downloadable file"
+                    ],
+                    "technicalNotes": "JSON.stringify and download",
+                    "filesAffected": [
+                        "apps/web/src/lib/utils/jsonExport.ts"
+                    ]
+                },
+                {
+                    "id": "T-R014",
+                    "name": "Dashboard Recent Runs Widget",
+                    "description": "Widget showing recent test runs on project dashboard",
+                    "status": "completed",
+                    "completedDate": "2026-01-20",
+                    "estimatedHours": 2,
+                    "dependencies": [],
+                    "acceptanceCriteria": [
+                        "Shows last 5-10 test runs",
+                        "Status indicators",
+                        "Quick link to run details"
+                    ],
+                    "technicalNotes": "Reuse useTestRuns hook",
+                    "filesAffected": [
+                        "apps/web/src/components/dashboard/RecentRunsWidget.tsx",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-R015",
+                    "name": "Dashboard Pass Rate Widget",
+                    "description": "Widget showing overall pass rate",
+                    "status": "completed",
+                    "completedDate": "2026-01-20",
+                    "estimatedHours": 2,
+                    "dependencies": [
+                        "T-R005"
+                    ],
+                    "acceptanceCriteria": [
+                        "Shows current pass rate percentage",
+                        "Comparison with last period",
+                        "Color coded (green/yellow/red)"
+                    ],
+                    "technicalNotes": "Calculate from recent runs",
+                    "filesAffected": [
+                        "apps/web/src/components/dashboard/PassRateWidget.tsx",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-R016",
+                    "name": "Dashboard Slowest Tests Widget",
+                    "description": "Widget showing slowest running tests",
+                    "status": "pending",
+                    "estimatedHours": 2,
+                    "dependencies": [
+                        "T-R006"
+                    ],
+                    "acceptanceCriteria": [
+                        "List of 5 slowest tests",
+                        "Average duration shown",
+                        "Link to test case"
+                    ],
+                    "technicalNotes": "Aggregate durations, sort desc",
+                    "filesAffected": [
+                        "apps/web/src/components/dashboard/SlowestTestsWidget.tsx",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-R017",
+                    "name": "Dashboard Failing Tests Widget",
+                    "description": "Widget showing most frequently failing tests",
+                    "status": "pending",
+                    "estimatedHours": 2,
+                    "dependencies": [],
+                    "acceptanceCriteria": [
+                        "List of most failing tests",
+                        "Failure count/rate shown",
+                        "Link to test case"
+                    ],
+                    "technicalNotes": "Count failures per test case over period",
+                    "filesAffected": [
+                        "apps/web/src/components/dashboard/FailingTestsWidget.tsx",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-R018",
+                    "name": "Default Test Run Naming",
+                    "description": "Add default naming for test runs with timestamps when triggered.",
+                    "status": "completed",
+                    "completedDate": "2026-01-20",
+                    "estimatedHours": 1,
+                    "dependencies": [],
+                    "acceptanceCriteria": [
+                        "Test runs are automatically named 'Run - YYYY-MM-DD HH:mm' if no name provided",
+                        "The name is stored in Firestore and displayed in the UI"
+                    ],
+                    "technicalNotes": "Update useTestRun hook and testRuns collection schema",
+                    "filesAffected": [
+                        "apps/web/src/lib/hooks/useTestRun.ts",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/test-runs/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-R020",
+                    "name": "Run Logs in List View",
+                    "description": "Show execution logs directly in the test runs list via expandable rows.",
+                    "status": "completed",
+                    "completedDate": "2026-01-20",
+                    "estimatedHours": 2,
+                    "dependencies": [],
+                    "acceptanceCriteria": [
+                        "Expand/collapse button on test run rows",
+                        "Expanded view shows step-by-step logs",
+                        "Supports both single cases and suites"
+                    ],
+                    "technicalNotes": "Refactor Expandable Row in TestRunsPage",
+                    "filesAffected": [
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/test-runs/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-AUTH01",
+                    "name": "Fix auth redirection on base URL",
+                    "description": "Automatically redirect authenticated users from base URL and login/signup to dashboard",
+                    "status": "completed",
+                    "completedDate": "2026-01-20"
+                },
+                {
+                    "id": "T-R019",
+                    "name": "Elaborate Test Result Reports",
+                    "description": "Implement a detailed, shareable report view for test runs with failure reasons.",
+                    "status": "completed",
+                    "completedDate": "2026-01-20",
+                    "estimatedHours": 5,
+                    "dependencies": [
+                        "T-R018"
+                    ],
+                    "acceptanceCriteria": [
+                        "Dedicated page for test run details (/projects/[projectId]/test-runs/[runId])",
+                        "Highly visual step-by-step result view",
+                        "Prominent display of failure reasons with logs",
+                        "Shareable URL for reports"
+                    ],
+                    "technicalNotes": "Create new dynamic route for test run details, move logs view to a more elaborate component",
+                    "filesAffected": [
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/test-runs/[runId]/page.tsx",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/test-runs/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-R022",
+                    "name": "Single Atomic Suite Runs",
+                    "description": "Trigger all tests in a suite as a single atomic run to prevent UI clutter and resource exhaustion.",
+                    "status": "completed",
+                    "completedDate": "2026-01-20",
+                    "estimatedHours": 6,
+                    "dependencies": [],
+                    "acceptanceCriteria": [
+                        "Running a suite creates ONE record in the history",
+                        "Runner processes suite tests sequentially/in parallel responsibly",
+                        "UI allows expanding suite results to see individual test steps"
+                    ],
+                    "technicalNotes": "Updated TestRun schema to include 'results' array and 'type' field.",
+                    "filesAffected": [
+                        "apps/web/src/lib/hooks/useTestRun.ts",
+                        "apps/web/src/lib/runner/server-executor.ts",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/test-runs/[runId]/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-R021",
+                    "name": "High Density Test Runs UI",
+                    "description": "Refactor the test runs history and detail views for high density and scalability.",
+                    "status": "completed",
+                    "completedDate": "2026-01-20",
+                    "estimatedHours": 4,
+                    "dependencies": [
+                        "T-R020"
+                    ],
+                    "acceptanceCriteria": [
+                        "Grid-based compact history view",
+                        "Nested/expandable results in run detail view",
+                        "Improved visual hierarchy for statuses"
+                    ],
+                    "technicalNotes": "Implement new grid layout and nested expansion components.",
+                    "filesAffected": [
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/test-runs/page.tsx",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/test-runs/[runId]/page.tsx"
+                    ]
+                }
+            ]
+        },
+        "phase5_advanced": {
+            "groupName": "Advanced Features",
+            "phase": "phase5",
+            "priority": "low",
+            "status": "partial",
+            "tasks": [
+                {
+                    "id": "T-A001",
+                    "name": "Project-level variables",
+                    "status": "completed",
+                    "completedDate": "2026-01-18"
+                },
+                {
+                    "id": "T-A002",
+                    "name": "Variable substitution in test steps",
+                    "status": "completed",
+                    "completedDate": "2026-01-18"
+                },
+                {
+                    "id": "T-A003",
+                    "name": "Data-Driven Testing",
+                    "description": "Run same test with multiple data sets",
+                    "status": "pending",
+                    "estimatedHours": 6,
+                    "dependencies": [],
+                    "acceptanceCriteria": [
+                        "Define data sets for test case",
+                        "Run test iterates over data sets",
+                        "Results show per data set iteration"
+                    ],
+                    "technicalNotes": "Add dataSets field to test case, loop in executor",
+                    "filesAffected": [
+                        "apps/web/src/lib/hooks/useTestCases.ts",
+                        "apps/web/src/lib/runner/server-executor.ts"
+                    ]
+                },
+                {
+                    "id": "T-A004",
+                    "name": "Scheduled Runs",
+                    "description": "Schedule tests to run at specific times",
+                    "status": "pending",
+                    "estimatedHours": 6,
+                    "dependencies": [],
+                    "acceptanceCriteria": [
+                        "Schedule a test/suite to run at time",
+                        "Cloud Function triggers at scheduled time",
+                        "Creates testRun in queue"
+                    ],
+                    "technicalNotes": "Use Firebase Cloud Functions with scheduling",
+                    "filesAffected": [
+                        "firebase/functions/src/scheduled.ts",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/schedules/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-A005",
+                    "name": "Recurring Schedules",
+                    "description": "Set up recurring test schedules (daily, weekly)",
+                    "status": "pending",
+                    "estimatedHours": 4,
+                    "dependencies": [
+                        "T-A004"
+                    ],
+                    "acceptanceCriteria": [
+                        "Define cron-like schedules",
+                        "Daily, weekly, custom options",
+                        "Enable/disable schedules"
+                    ],
+                    "technicalNotes": "Store cron expressions, Cloud Scheduler",
+                    "filesAffected": [
+                        "firebase/functions/src/scheduled.ts",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/schedules/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-A006",
+                    "name": "Email Notifications",
+                    "description": "Send email on test failure",
+                    "status": "pending",
+                    "estimatedHours": 4,
+                    "dependencies": [],
+                    "acceptanceCriteria": [
+                        "Configure email recipients per project",
+                        "Email sent on test failure",
+                        "Email includes summary and link"
+                    ],
+                    "technicalNotes": "Use SendGrid or Firebase Extension for email",
+                    "filesAffected": [
+                        "firebase/functions/src/notifications.ts",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/settings/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-A007",
+                    "name": "Slack Integration",
+                    "description": "Send Slack messages on test events",
+                    "status": "pending",
+                    "estimatedHours": 4,
+                    "dependencies": [],
+                    "acceptanceCriteria": [
+                        "Configure Slack webhook per project",
+                        "Message sent on failure/completion",
+                        "Rich message format with results"
+                    ],
+                    "technicalNotes": "Use Slack incoming webhooks",
+                    "filesAffected": [
+                        "firebase/functions/src/notifications.ts",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/settings/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-A008",
+                    "name": "Webhook Callbacks",
+                    "description": "HTTP webhook on test completion",
+                    "status": "pending",
+                    "estimatedHours": 3,
+                    "dependencies": [],
+                    "acceptanceCriteria": [
+                        "Configure webhook URL per project",
+                        "POST request sent on completion",
+                        "Payload includes test results"
+                    ],
+                    "technicalNotes": "Cloud Function POST to configured URL",
+                    "filesAffected": [
+                        "firebase/functions/src/webhooks.ts",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/settings/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-A009",
+                    "name": "Test Case Comments",
+                    "description": "Add comments/discussions to test cases",
+                    "status": "pending",
+                    "estimatedHours": 4,
+                    "dependencies": [],
+                    "acceptanceCriteria": [
+                        "Add comment to test case",
+                        "View comment thread",
+                        "Timestamps and author shown"
+                    ],
+                    "technicalNotes": "Sub-collection 'comments' under testCases",
+                    "filesAffected": [
+                        "apps/web/src/lib/hooks/useComments.ts",
+                        "apps/web/src/components/comments/CommentThread.tsx"
+                    ]
+                },
+                {
+                    "id": "T-A010",
+                    "name": "Activity History",
+                    "description": "Track and display activity log",
+                    "status": "pending",
+                    "estimatedHours": 5,
+                    "dependencies": [],
+                    "acceptanceCriteria": [
+                        "Log all create/update/delete actions",
+                        "Show activity feed on dashboard",
+                        "Filter by user/action type"
+                    ],
+                    "technicalNotes": "Create 'activities' collection, log via hooks",
+                    "filesAffected": [
+                        "apps/web/src/lib/hooks/useActivity.ts",
+                        "apps/web/src/components/activity/ActivityFeed.tsx"
+                    ]
+                },
+                {
+                    "id": "T-A011",
+                    "name": "Team Permissions",
+                    "description": "Role-based access control for team members",
+                    "status": "pending",
+                    "estimatedHours": 6,
+                    "dependencies": [
+                        "T-M004"
+                    ],
+                    "acceptanceCriteria": [
+                        "Define roles: owner, admin, member, viewer",
+                        "Restrict actions based on role",
+                        "UI shows/hides based on permissions"
+                    ],
+                    "technicalNotes": "Add 'role' to member data, check in Firestore rules",
+                    "filesAffected": [
+                        "firebase/firestore.rules",
+                        "apps/web/src/lib/hooks/usePermissions.ts"
+                    ]
+                },
+                {
+                    "id": "T-A012",
+                    "name": "Jira Integration",
+                    "description": "Link test cases to Jira tickets",
+                    "status": "pending",
+                    "estimatedHours": 6,
+                    "dependencies": [],
+                    "acceptanceCriteria": [
+                        "Configure Jira connection",
+                        "Link test case to Jira issue",
+                        "Show linked issues on test case"
+                    ],
+                    "technicalNotes": "Use Jira REST API, store issue keys",
+                    "filesAffected": [
+                        "apps/web/src/lib/integrations/jira.ts",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/settings/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-A013",
+                    "name": "Coverage Visualization",
+                    "description": "Visualize test coverage of features/requirements",
+                    "status": "pending",
+                    "estimatedHours": 5,
+                    "dependencies": [
+                        "T-A012"
+                    ],
+                    "acceptanceCriteria": [
+                        "Define features/requirements",
+                        "Link tests to features",
+                        "Show coverage matrix/chart"
+                    ],
+                    "technicalNotes": "Create 'features' collection, relation to testCases",
+                    "filesAffected": [
+                        "apps/web/src/lib/hooks/useFeatures.ts",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/coverage/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-A014",
+                    "name": "Import Selenium IDE",
+                    "description": "Import test cases from Selenium IDE export",
+                    "status": "pending",
+                    "estimatedHours": 5,
+                    "dependencies": [],
+                    "acceptanceCriteria": [
+                        "Upload .side file",
+                        "Parse and convert to our format",
+                        "Create test cases from import"
+                    ],
+                    "technicalNotes": "Parse Selenium IDE JSON format",
+                    "filesAffected": [
+                        "apps/web/src/lib/utils/seleniumImport.ts",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/import/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-A015",
+                    "name": "Export Test Cases",
+                    "description": "Export test cases in standard format",
+                    "status": "pending",
+                    "estimatedHours": 3,
+                    "dependencies": [
+                        "T-R013"
+                    ],
+                    "acceptanceCriteria": [
+                        "Export to JSON format",
+                        "Include all test case data and steps",
+                        "Can be re-imported"
+                    ],
+                    "technicalNotes": "Extend JSON export with full test case data",
+                    "filesAffected": [
+                        "apps/web/src/lib/utils/testCaseExport.ts"
+                    ]
+                },
+                {
+                    "id": "T-A016",
+                    "name": "Draft Test Case Data Model",
+                    "description": "Update Firestore schema to support draft test cases, which are not yet part of the main suite execution.",
+                    "status": "completed",
+                    "completedDate": "2026-01-20",
+                    "estimatedHours": 2,
+                    "dependencies": [],
+                    "acceptanceCriteria": [
+                        "Draft test cases collection or status field",
+                        "Drafts are linked to a suite but status is 'draft'",
+                        "Drafts do not show up in runner"
+                    ],
+                    "technicalNotes": "Add 'status' field to TestCase interface ('active' | 'draft'). Default to 'active'.",
+                    "filesAffected": [
+                        "packages/shared/src/types/index.ts",
+                        "apps/web/src/lib/hooks/useTestCases.ts"
+                    ]
+                },
+                {
+                    "id": "T-A017",
+                    "name": "AI Test Generator Backend",
+                    "description": "Backend function to accept URL, scrape content, and prompt LLM to generate test cases",
+                    "status": "completed",
+                    "completedDate": "2026-01-20",
+                    "estimatedHours": 6,
+                    "dependencies": [
+                        "T-A016"
+                    ],
+                    "acceptanceCriteria": [
+                        "Cloud Function / API Endpoint to accept URL",
+                        "Scrapes HTML/Accessibility Tree",
+                        "Prompts LLM (Gemini/OpenAI) to generate steps",
+                        "Returns valid JSON test case structure"
+                    ],
+                    "technicalNotes": "Use LangChain or direct API. Prompt engineering for robust step generation. Mock response for now if API key missing.",
+                    "filesAffected": [
+                        "apps/web/src/app/api/ai/generate/route.ts",
+                        "packages/shared/src/types/index.ts"
+                    ]
+                },
+                {
+                    "id": "T-A018",
+                    "name": "AI Generation UI",
+                    "description": "UI modal to input URL and trigger AI generation",
+                    "status": "completed",
+                    "completedDate": "2026-01-20",
+                    "estimatedHours": 4,
+                    "dependencies": [
+                        "T-A017"
+                    ],
+                    "acceptanceCriteria": [
+                        "Button in Test Suite view 'Generate with AI'",
+                        "Modal to enter Feature URL and optional instructions",
+                        "Loading state during generation"
+                    ],
+                    "technicalNotes": "Call API endpoint, show progress",
+                    "filesAffected": [
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/suites/page.tsx",
+                        "apps/web/src/components/suites/AIGenerateModal.tsx"
+                    ]
+                },
+                {
+                    "id": "T-A019",
+                    "name": "Draft Review UI",
+                    "description": "Interface to review generated drafts, edit them, and confirm/discard",
+                    "status": "completed",
+                    "completedDate": "2026-01-20",
+                    "estimatedHours": 4,
+                    "dependencies": [
+                        "T-A018"
+                    ],
+                    "acceptanceCriteria": [
+                        "List generated drafts separately",
+                        "Allow editing steps before confirming",
+                        "One-click confirm to promote to active test case",
+                        "Discard option"
+                    ],
+                    "technicalNotes": "Separate section in Suite Detail or dedicated Review Mode",
+                    "filesAffected": [
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/suites/page.tsx",
+                        "apps/web/src/components/test-cases/DraftReviewList.tsx"
+                    ]
+                },
+                {
+                    "id": "T-A020",
+                    "name": "External AI Import API",
+                    "description": "API endpoint to accept JSON test cases from external AIs, validate the format, and create test cases in Firestore",
+                    "status": "completed",
+                    "completedDate": "2026-01-20",
+                    "estimatedHours": 4,
+                    "dependencies": [
+                        "T-A016"
+                    ],
+                    "acceptanceCriteria": [
+                        "POST endpoint at /api/import/json accepts test case JSON",
+                        "Validates JSON against CreateTestCaseInput schema",
+                        "Returns validation errors with helpful messages",
+                        "Creates test cases in Firestore with 'draft' status",
+                        "Supports single test case or array of test cases"
+                    ],
+                    "technicalNotes": "Use Zod for validation. Reuse existing test case creation logic. Accept flexible JSON format and transform to internal schema.",
+                    "filesAffected": [
+                        "apps/web/src/app/api/import/json/route.ts",
+                        "packages/shared/src/types/index.ts"
+                    ]
+                },
+                {
+                    "id": "T-A021",
+                    "name": "External AI Import UI",
+                    "description": "Modal interface for users to paste JSON test cases from external AIs",
+                    "status": "completed",
+                    "completedDate": "2026-01-20",
+                    "estimatedHours": 3,
+                    "dependencies": [
+                        "T-A020"
+                    ],
+                    "acceptanceCriteria": [
+                        "Button 'Import AI Tests' in test cases/suites page",
+                        "Modal with large textarea for JSON paste",
+                        "JSON syntax highlighting (optional)",
+                        "Live validation feedback",
+                        "Preview of tests to import before confirmation",
+                        "Success message showing number of tests imported"
+                    ],
+                    "technicalNotes": "Create ImportJSONModal component. Show validation errors inline. Allow selecting target suite.",
+                    "filesAffected": [
+                        "apps/web/src/components/test-cases/ImportJSONModal.tsx",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/test-cases/page.tsx",
+                        "apps/web/src/app/(dashboard)/projects/[projectId]/suites/[suiteId]/page.tsx"
+                    ]
+                },
+                {
+                    "id": "T-A022",
+                    "name": "JSON Format Helpers & Examples",
+                    "description": "Provide JSON format documentation and example prompts for external AIs",
+                    "status": "completed",
+                    "completedDate": "2026-01-20",
+                    "estimatedHours": 2,
+                    "dependencies": [
+                        "T-A021"
+                    ],
+                    "acceptanceCriteria": [
+                        "Show example JSON format in import modal",
+                        "Copy-able prompt template for ChatGPT/Claude",
+                        "Support common AI output formats",
+                        "Help text explaining each field"
+                    ],
+                    "technicalNotes": "Create prompt templates that generate compatible JSON. Add format documentation panel in modal.",
+                    "filesAffected": [
+                        "apps/web/src/components/test-cases/ImportJSONModal.tsx",
+                        "apps/web/src/lib/utils/aiPromptTemplates.ts"
+                    ]
+                }
+            ]
+        }
+    },
+    "taskOrder": [
+        "T-A020",
+        "T-A021",
+        "T-A022",
+        "T-E007",
+        "T-E010",
+        "T-E014",
+        "T-E016",
+        "T-R012",
+        "T-R013",
+        "T-R014",
+        "T-R017",
+        "T-M004",
+        "T-M007",
+        "T-M017",
+        "T-R005",
+        "T-R006",
+        "T-R007",
+        "T-R015",
+        "T-R016",
+        "T-E015",
+        "T-R009",
+        "T-R010",
+        "T-M008",
+        "T-R008",
+        "T-R011",
+        "T-A003",
+        "T-A004",
+        "T-A005",
+        "T-A006",
+        "T-A007",
+        "T-A008",
+        "T-A009",
+        "T-A010",
+        "T-A011",
+        "T-A012",
+        "T-A013",
+        "T-A014",
+        "T-A015",
+        "T-A016",
+        "T-A017",
+        "T-A018",
+        "T-A019"
+    ]
+}

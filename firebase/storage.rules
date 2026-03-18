@@ -1,0 +1,47 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    
+    // Helper function to check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    // Screenshots from test runs
+    match /screenshots/{projectId}/{runId}/{fileName} {
+      allow read, write: if false;
+    }
+    
+    // Videos from test runs
+    match /videos/{projectId}/{runId}/{fileName} {
+      allow read, write: if false;
+    }
+
+    // Playwright traces
+    match /traces/{projectId}/{runId}/{fileName} {
+      allow read, write: if false;
+    }
+    
+    // User avatars
+    match /avatars/{userId}/{fileName} {
+      // Anyone can read avatars
+      allow read: if true;
+      // Only the user can upload their avatar
+      allow write: if isAuthenticated() && 
+                      request.auth.uid == userId &&
+                      request.resource.size < 5 * 1024 * 1024;
+    }
+    
+    // Project assets (logos, etc.)
+    match /projects/{projectId}/{allPaths=**} {
+      // Anyone can read project assets
+      allow read: if true;
+      // Only authenticated users can upload
+      allow write: if isAuthenticated();
+    }
+    // Test Run Artifacts
+    match /test-runs/{runId}/{testCaseId}/{fileName} {
+      allow read, write: if false;
+    }
+  }
+}
